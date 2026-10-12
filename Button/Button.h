@@ -52,10 +52,10 @@ void ButtonSetRepeatTime(Button_t *Button, uint32_t RepeatTime); //This function
 void ButtonSetTimeBetweenRepeats(Button_t *Button, uint32_t TimeBetweenRepeats); 
 
 //Callback registration functions
-ButtonStatus_t ButtonRegisterShortPressCallback(Button_t *Button, void (*ShortPressCallback)(Button_t *Button));
-ButtonStatus_t ButtonRegisterLongPressCallback(Button_t *Button, void (*LongPressCallback)(Button_t *Button));
-ButtonStatus_t ButtonRegisterRepeatCallback(Button_t *Button, void (*RepeatCallback)(Button_t *Button));
-ButtonStatus_t ButtonRegisterReleaseCallback(Button_t *Button, void (*ReleaseCallback)(Button_t *Button));
+ButtonStatus_t ButtonRegisterShortPressCallback(Button_t *Button, void (*ShortPressCallback)());
+ButtonStatus_t ButtonRegisterLongPressCallback(Button_t *Button, void (*LongPressCallback)());
+ButtonStatus_t ButtonRegisterRepeatCallback(Button_t *Button, void (*RepeatCallback)());
+ButtonStatus_t ButtonRegisterReleaseCallback(Button_t *Button, void (*ReleaseCallback)());
 
 //Callback unregistration functions
 void ButtonUnregisterShortPressCallback(Button_t *Button);

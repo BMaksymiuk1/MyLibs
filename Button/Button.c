@@ -42,7 +42,7 @@ void ButtonSetTimeBetweenRepeats(Button_t *Button, uint32_t TimeBetweenRepeats)
     Button->TimeBetweenRepeats = TimeBetweenRepeats;
 }
 
-ButtonStatus_t ButtonRegisterShortPressCallback(Button_t *Button, void (*ShortPressCallback)(Button_t *Button))
+ButtonStatus_t ButtonRegisterShortPressCallback(Button_t *Button, void (*ShortPressCallback)())
 {
     if(Button == NULL || ShortPressCallback == NULL)
     {
@@ -52,7 +52,7 @@ ButtonStatus_t ButtonRegisterShortPressCallback(Button_t *Button, void (*ShortPr
     return BUTTON_STATUS_OK;
 }
 
-ButtonStatus_t ButtonRegisterLongPressCallback(Button_t *Button, void (*LongPressCallback)(Button_t *Button))
+ButtonStatus_t ButtonRegisterLongPressCallback(Button_t *Button, void (*LongPressCallback)())
 {
     if(Button == NULL || LongPressCallback == NULL)
     {
@@ -62,7 +62,7 @@ ButtonStatus_t ButtonRegisterLongPressCallback(Button_t *Button, void (*LongPres
     return BUTTON_STATUS_OK;
 }
 
-ButtonStatus_t ButtonRegisterRepeatCallback(Button_t *Button, void (*RepeatCallback)(Button_t *Button))
+ButtonStatus_t ButtonRegisterRepeatCallback(Button_t *Button, void (*RepeatCallback)())
 {
     if(Button == NULL || RepeatCallback == NULL)
     {
@@ -72,7 +72,7 @@ ButtonStatus_t ButtonRegisterRepeatCallback(Button_t *Button, void (*RepeatCallb
     return BUTTON_STATUS_OK;
 }
 
-ButtonStatus_t ButtonRegisterReleaseCallback(Button_t *Button, void (*ReleaseCallback)(Button_t *Button))
+ButtonStatus_t ButtonRegisterReleaseCallback(Button_t *Button, void (*ReleaseCallback)())
 {
     if(Button == NULL || ReleaseCallback == NULL)
     {
