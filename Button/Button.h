@@ -22,6 +22,8 @@ typedef enum  //This enumeration defines the possible states of a button
     BUTTON_STATE_RELEASE
 }ButtonState_t;
 
+typedef struct ButtonStruct Button_t; // Forward declaration of the Button structure
+
 typedef struct ButtonStruct//This structure holds the configuration and state of a button
 {
     ButtonState_t State;
