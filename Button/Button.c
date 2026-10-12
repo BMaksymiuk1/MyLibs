@@ -222,7 +222,7 @@ static void ButtonReleaseRoutine(Button_t *Button)
 {
     if(Button->ReleaseCallback != NULL)
     {
-        Button->ReleaseCallback(); //User defined callback for Release
+        Button->ReleaseCallback(Button); //User defined callback for Release
     }
     Button->State = BUTTON_STATE_IDLE;
 }
